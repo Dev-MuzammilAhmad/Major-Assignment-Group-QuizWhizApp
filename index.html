@@ -152,6 +152,108 @@
           </div>
         </section>
 
+        <!-- Results Screen -->
+        <section id="results-screen" class="screen hidden">
+          <div class="results-container">
+            <div class="results-header">
+              <h2 id="results-title">Quiz Complete!</h2>
+              <div class="score-circle" id="score-circle">
+                <span class="score-value" id="score-value">0</span>
+                <span class="score-label">Score</span>
+              </div>
+            </div>
+
+            <div class="results-stats">
+              <div class="stat-item">
+                <span class="stat-value" id="correct-count">0</span>
+                <span class="stat-label">Correct</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="wrong-count">0</span>
+                <span class="stat-label">Wrong</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="time-taken">0:00</span>
+                <span class="stat-label">Time</span>
+              </div>
+            </div>
+
+            <div class="results-actions">
+              <button class="btn-primary" id="review-btn">
+                Review Answers
+              </button>
+              <button class="btn-secondary" id="retry-btn">Try Again</button>
+              <button class="btn-secondary" id="new-quiz-btn">New Quiz</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Review Screen -->
+        <section id="review-screen" class="screen hidden">
+          <h2>Review Your Answers</h2>
+          <div class="review-container" id="review-container"></div>
+          <button class="btn-primary" id="back-to-results">
+            ← Back to Results
+          </button>
+        </section>
+
+        <!-- Leaderboard Screen -->
+        <section id="leaderboard-screen" class="screen hidden">
+          <h2>Leaderboard</h2>
+
+          <div class="leaderboard-filters">
+            <select id="lb-category-filter">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+
+          <div class="leaderboard-table-container">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Username</th>
+                  <th>Topic</th>
+                  <th>Score</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboard-body"></tbody>
+            </table>
+          </div>
+
+          <p class="guest-notice hidden" id="leaderboard-guest-notice">
+            Login to save your scores to the leaderboard!
+          </p>
+        </section>
+
+        <!-- History Modal -->
+        <div id="history-modal" class="modal hidden">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Your Quiz History</h3>
+              <button class="modal-close" id="close-history">&times;</button>
+            </div>
+            <div class="modal-body" id="history-list"></div>
+          </div>
+        </div>
+
+        <!-- Success Popup -->
+        <div id="success-popup" class="popup hidden">
+          <div class="popup-content">
+            <div class="popup-icon">✅</div>
+            <h3>Account Created Successfully!</h3>
+            <p>You can now login with your credentials.</p>
+            <button class="btn-primary" id="popup-ok-btn">OK</button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <p> Quiz Whiz © 2024 | Built with ❤️</p>
+      </footer>
+    </div>
     <!-- Scripts -->
     <script src="js/config.js"></script>
     <script src="js/data.js"></script>
